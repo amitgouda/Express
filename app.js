@@ -11,6 +11,8 @@ const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(express.static(path.join(__dirname,'public')));   //by this we can acess any file like .js or .css statically
+
 app.use('/admin',adminRoutes);
 app.use(shopRoutes);
 
